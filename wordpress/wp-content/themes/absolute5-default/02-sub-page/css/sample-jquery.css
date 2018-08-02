@@ -1,0 +1,208 @@
+@charset "utf-8";
+/*================================================================================================
+
+* jQuery Sample *
+
+================================================================================================*/
+.jquery-sample .title h2 {
+	font-size: 3rem;
+	text-align: center;
+}
+.jquery-sample .title p:last-child {
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+/*================================================================================================
+
+* SWIPER *
+
+================================================================================================*/
+.swiper-demo-wrap{
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 8rem 0rem;
+	background: #fff;
+	text-align: center;
+}
+
+.swiper-demo-wrap .swiper-container {
+	padding: 2rem 2rem 4rem 2rem;
+	width: 100%;
+	max-width: 1240px;
+	margin: 0 auto;
+	background: #eee;
+	border: 1px solid #eee;
+	margin-bottom: 8rem;
+}
+
+.swiper-demo-wrap .swiper-button-next,
+.swiper-demo-wrap .swiper-button-prev {/*NEXT PREV BTN*/
+	width: 35px;
+	height: 35px;
+	background-size: contain;
+	background-position: center;
+}
+
+.swiper-demo-wrap .swiper-slide {
+	width: 35%;
+	height: 280px;
+	background: #fff;
+}
+.swiper-demo-wrap .swiper-slide p {
+	color: #000;
+	font-size: 1.25rem;
+}
+
+/*ドットの大きさ*/
+.swiper-demo-wrap .swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+}
+/*ドットのマージン*/
+.swiper-demo-wrap .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 10px;
+}
+/*ドットの表示位置*/
+.swiper-demo-wrap .swiper-pagination-fraction,
+.swiper-demo-wrap .swiper-pagination-custom,
+.swiper-demo-wrap .swiper-container-horizontal > .swiper-pagination-bullets {
+	bottom: 7px;
+}
+
+/*FADE MODE IMAGES*/
+.swiper-container.fade{
+	padding: 0rem;
+}
+.fade .swiper-slide {
+	height: 700px;
+}
+.swiper-demo-wrap .swiper-container.fade .swiper-wrapper > div:nth-child(1) {
+	background: url(../../img/smp-img/01.jpg)no-repeat center center;
+	background-size: cover;
+}
+.swiper-demo-wrap .swiper-container.fade .swiper-wrapper > div:nth-child(2) {
+	background: url(../../img/smp-img/02.jpg)no-repeat center center;
+	background-size: cover;
+}
+.swiper-demo-wrap .swiper-container.fade .swiper-wrapper > div:nth-child(3) {
+	background: url(../../img/smp-img/03.jpg)no-repeat center center;
+	background-size: cover;
+}
+.swiper-demo-wrap .swiper-container.fade .swiper-wrapper > div:nth-child(4) {
+	background: url(../../img/smp-img/04.jpg)no-repeat center center;
+	background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+.swiper-demo-wrap .swiper-slide {
+	width: 75%;
+	height: 280px;
+	background: #fff;
+}
+/* ** */}
+
+
+/*================================================================================================
+
+* SCROLL BAR *
+
+================================================================================================*/
+
+.scroll-demo-wrap{
+	width: 100%;
+	padding: 10rem 1rem;
+	background: #f7f7f7;
+}
+
+.scroll-demo-box{
+	width:100%;
+	max-width: 680px;
+	margin: 0 auto;
+	height: 380px;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.3);
+}
+	.scroll-demo-box ul{
+		padding: 2rem;
+	}
+	.scroll-demo-box ul li{
+		width: 100%;
+	}
+	.scroll-demo-box ul li:nth-child(1){
+		border-left: 3px solid;
+		padding-left: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	.scroll-demo-box ul li:last-child{
+		border-left: 3px solid;
+		padding-left: 0.5rem;
+		margin-top: 1rem;
+	}
+
+/* ** */
+@media only screen and (max-width: 1024px) {
+
+/* ** */}
+
+@media only screen and (max-width: 768px) {
+/* ** */}
+
+@media only screen and (max-width: 480px) {
+/* ** */}
+
+
+/*================================================================================================
+
+* Scroll add class Sample *
+
+================================================================================================*/
+.scroll-add-class-demo-wrap {
+	width: 100%;
+	margin: 0 auto;
+	padding: 8rem 1rem 8rem 1rem;
+	background: #f7f7f7;
+}
+.scroll-add-class-demo-wrap .title {
+	margin-bottom: 50rem;
+}
+.scroll-add-class-demo-wrap .add-target {
+	width: 100%;
+	max-width: 680px;
+	height: 300px;
+	margin: 0 auto;
+	background: #fff;
+	border: 3px solid #fff;
+	margin-bottom: 2rem;
+	transition: all 0.35s ease-in-out;
+}
+		.scroll-add-class-demo-wrap .add-target.show{
+			border: 3px solid #000;
+			transition: all 0.35s ease-in-out;
+		}
+
+
+/*================================================================================================
+
+* bodymovin *
+
+================================================================================================*/
+.bodymovin-demo-wrap {
+	width: 100%;
+	padding: 8rem 1rem;
+	min-height: 1100px;
+}
+
+.bodymovin-wrap {
+	width: 100%;
+	margin: 0 auto;
+}
+#bodymovin {
+	width: 100%;
+	max-width: 380px;
+	height: 139px;
+	margin: 0 auto;
+}

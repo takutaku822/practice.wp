@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.sub-page .about-wrap {
+	width: 100%;
+	padding: 8rem 1rem;
+	background: #fff;
+}
+
+h3.step-title p {
+	font-size: 1.25rem;
+	text-align: center;
+}
+
+/*================================================================================================
+
+* gist *
+
+================================================================================================*/
+table.highlight tr td:nth-child(1n+1) {
+    padding: 0.5rem !important;
+    font-size: 15px;
+    font-family: "Noto Snas Japanese";
+}
+table.highlight tr:nth-child(2n+1) td {
+    background: #fafafa;
+    padding: 0.5rem !important;
+    font-size: 15px;
+    font-family: "Noto Snas Japanese";
+}
+
+
+/*================================================================================================
+
+* 例 *
+
+================================================================================================*/
+/* アイテム梱包要素 ================================================*/
+.flexbox-manual-page .item-wrap {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 2rem 0rem;
+	background: #ddd;/*わかりやすく例では色つけます*/
+}
+
+/* 3並びになるアイテム ================================================*/
+.flexbox-manual-page .item-wrap .item {
+	width: 31%;
+	background: #fff;
+	padding: 1rem;
+	margin-bottom: 1rem;/*便宜上例ではbottomにmargin入れます*/
+}
+
+.flexbox-manual-page .card {
+	width: 100%;
+	margin-bottom: 4rem;
+}
+	.flexbox-manual-page .card .img {
+		width: 50%;
+		background-image: url(../../img/smp-img/006.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	.flexbox-manual-page .card.no02 .img {
+		background-image: url(../../img/smp-img/003.jpg);
+		background-size: cover;
+	}
+	.flexbox-manual-page .card .text {
+		width: 50%;
+		padding: 2rem;
+	}
+
+@media only screen and (max-width: 768px) {
+	.flexbox-manual-page .card .img {
+		width: 100%;
+		height: 180px;
+		margin-bottom: 1rem;
+	}
+	.flexbox-manual-page .card .text {
+		width: 100%;
+	}
+/********************/}
+
+/*================================================================================================
+
+* メディアクエリ *
+
+================================================================================================*/
+@media only screen and (max-width: 1024px) {
+/********************/}
+@media only screen and (max-width: 768px) {
+/********************/}
+@media only screen and (max-width: 480px) {
+/********************/}

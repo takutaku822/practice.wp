@@ -1,0 +1,123 @@
+@charset "utf-8";
+/*================================================================================================
+
+* HERO HEADER - MENU *
+
+================================================================================================*/
+ul.hero-menu {
+	width: 100%;
+	max-width: 480px;
+}
+ul.hero-menu {
+	width: 100%;
+	max-width: 680px;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+}
+ul.hero-menu li {
+	width: 23%;
+}
+ul.hero-menu li a {
+	padding: 1.5rem 1rem;
+	color: #448AFF;
+	border: 1px solid #448AFF;
+	display: block;
+	text-align: center;
+	transition: all 0.25s ease-in-out;
+}
+ul.hero-menu li a.active {
+	background: #116cff;
+	border: 1px solid #116cff;
+	color: #fff;
+}
+ul.hero-menu li a:hover {
+	background: #448AFF;
+	color: #fff;
+	transition: all 0.25s ease-in-out;
+}
+
+
+/*================================================================================================
+
+* HERO HEADER - GLOBAL *
+
+================================================================================================*/
+.hero-header-wrap {
+	width: 100%;
+	height: 800px;
+	overflow: hidden;
+	position: relative;
+	background: #f7f7f7;
+}
+.ghost-contents {
+	padding: 4rem 1rem;
+	background: #f7f7f7;
+	overflow: hidden;
+}
+		.ghost-contents .inner {
+			width: 100%;
+			max-width: 680px;
+			margin: 0 auto;
+		}
+		.ghost-contents .inner h2 {
+			font-size: 2rem;
+			border-bottom: 1px solid #ddd;
+			padding-bottom: 1rem;
+			margin-bottom: 1rem;
+		}
+		.ghost-contents .inner p {
+			letter-spacing: 1px;
+			line-height: 2rem;
+		}
+
+/*================================================================================================
+
+* HERO HEADER - A *
+
+================================================================================================*/
+
+.hero-img {
+	width: 100%;
+	height: 100%;
+	background: url(../../img/smp-img/01.jpg)no-repeat center center;
+	position: absolute;margin: auto;top: 0;right: 0;left: 0;bottom: 0;
+	z-index: 100;
+}
+.hero-bg {
+	width: 100%;
+	height: 100%;
+	background: url(../../img/smp-img/01.jpg)no-repeat center center;
+	position: absolute;margin: auto;top: 0;right: 0;left: 0;bottom: 0;
+	z-index: 50;
+}
+
+/*================================================================================================
+
+* HERO HEADER - B *
+
+================================================================================================*/
+
+.hero-img-b {
+	width: 100%;
+	height: 100%;
+	background: url(../../img/smp-img/01.jpg)no-repeat center center;
+	position: absolute;margin: auto;top: 0;right: 0;left: 0;bottom: 0;
+	z-index: 100;
+	transition: all 0.35s ease-in-out;
+}
+.hero-img-b.scale {
+	transform: scale3d(0.9,0.9,0.9);
+	transition: all 0.35s ease-in-out;
+}
+.hero-img-b.scale- {
+	transform: scale3d(0.9,0.9,0.9) translateY(-4rem);
+	transition-duration: 0.35s;
+	transition-timing-function: ease-in-out;
+	box-shadow: 0 50px 150px rgba(0,0,0,0.30), 0 100px 100px rgba(0,0,0,0.15);
+}
+.hero-header-wrap.b{
+	margin-top: 8rem;
+}
+.hero-header-wrap.b.show{
+	overflow: visible;
+}

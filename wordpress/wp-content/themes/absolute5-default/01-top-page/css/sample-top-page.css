@@ -1,0 +1,406 @@
+@charset "utf-8";
+/*================================================================================================
+
+* FIRST VIEW *
+
+================================================================================================*/
+.index .first-view {/*ファーストビューの梱包要素*/
+	width: 100%;
+	min-height: 100vh;/*JSで高さを与えるので可変によるカクつき対策*/
+	padding: 0 1rem;
+	position: relative;
+	overflow: hidden;
+}
+.index .first-view .box {/*ロゴを格納している要素 flex center でセンター寄せにした後にtranslateY(-8rem)で若干上部にずらしている*/
+	width: 100%;
+	max-width: 380px;
+	margin: 0 auto;
+	text-align: center;
+	transform: translateY(-8rem);
+	z-index: 10;
+	position: relative;
+}
+.index .first-view .box p {
+	font-weight: 700;
+	color: #fff;
+}
+
+.hero-img- {/*スクロールに応じてボケる背景 sample-index.js の 11行目*/
+	width: calc(100% + 30px);
+	height: 100%;
+	content: "";
+	background-image: url(../../img/smp-img/top-bg0202-.jpg) !important;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center 18%;
+	position: relative;
+	position: absolute;margin: auto;top: 0;right: 0;bottom: 0;left: -15px;
+	z-index: 5;
+}
+
+html.ie .index .first-view .box {
+	display: none;
+}
+
+
+/* SVG ANIMATION - 全体を一気に ================================================*/
+.stroke {
+  fill:#fff;
+  stroke:#fff;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 0;
+  stroke-width: 1;
+  -webkit-animation: all-fill 4s ease 0s;
+  animation: all-fill 4s ease 0s;
+}
+
+  @-webkit-keyframes all-fill {
+      0% {
+        stroke-dashoffset: 2000;
+        fill:transparent;
+      }
+      40% {
+        stroke-dashoffset: 2000;
+        fill:transparent;
+      }
+      50% {
+        fill:transparent;
+      }
+      100% {
+        stroke-dashoffset: 0;
+        fill:#fff;
+      }
+    }
+
+/* SVG ANIMATION - 1つずつ ================================================*/
+.stroke- {
+  fill:#fff;
+  stroke:#fff;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 0;
+  stroke-width: 1;
+  opacity: 0;
+  animation-name: hello;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+		.stroke-.no01 {
+			animation-delay: 0s;
+		}
+		.stroke-.no02 {
+			animation-delay: 0.1s;
+		}
+		.stroke-.no03 {
+			animation-delay: 0.2s;
+		}
+		.stroke-.no04 {
+			animation-delay: 0.3s;
+		}
+		.stroke-.no05 {
+			animation-delay: 0.4s;
+		}
+		.stroke-.no06 {
+			animation-delay: 0.5s;
+		}
+		.stroke-.no07 {
+			animation-delay: 0.6s;
+		}
+		.stroke-.no08 {
+			animation-delay: 0.7s;
+		}
+		.stroke-.no09 {
+			animation-delay: 0.8s;
+		}
+		.stroke-.no09 {
+			animation-delay: 0.9s;
+		}
+		.stroke-.no10 {
+			animation-delay: 0.9s;
+		}
+
+  @-webkit-keyframes hello {
+      0% {
+      	opacity: 0;
+        stroke-dashoffset: 2000;
+        fill:transparent;
+      }
+      15% {
+      	opacity: 1;
+        stroke-dashoffset: 2000;
+        fill:transparent;
+      }
+      40% {
+      	opacity: 1;
+        stroke-dashoffset: 2000;
+        fill:transparent;
+      }
+      50% {
+      	opacity: 1;
+        fill:transparent;
+      }
+      100% {
+      	opacity: 1;
+        stroke-dashoffset: 0;
+      }
+    }
+
+/*================================================================================================
+
+* メディアクエリ *
+
+================================================================================================*/
+@media only screen and (max-width: 1024px) {
+/********************/}
+@media only screen and (max-width: 768px) {
+/********************/}
+@media only screen and (max-width: 480px) {
+/********************/}
+
+
+/*================================================================================================
+
+* ABOUT *
+
+================================================================================================*/
+.index .about-wrap {/*ABOUTセクションの梱包要素*/
+	width: 100%;
+	padding: 8rem 1rem;/*セクションの上下左右のpadding 基本的にセクションの上下は4/8/12/16/20...と4の倍数で調整する*/
+	background: #fff;
+}
+.index .about-wrap .text-box {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 680px;
+}
+
+/* アイテム ================================================*/
+.index .about-wrap .item {
+	width: 100%;
+	margin: 0 auto;
+	background: #fff;
+}
+/* 画像 ================================================*/
+.index .about-wrap .item .img {
+	width: 45%;
+	background-image: url(../../img/smp-img/001.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/* テキスト ================================================*/
+.index .about-wrap .item .info {
+	width: 55%;
+	padding: 2rem 0 2rem 2rem;
+}
+		.index .about-wrap .item .info .title h3 {
+			font-size: 1.25rem;
+			padding: 0.5rem 1rem;
+			border-left: 0.25rem solid ;
+			background: #fafafa;
+			margin-bottom: 1rem;
+			font-family: 'Montserrat', 'Noto Sans Japanese';
+		}
+
+
+/*================================================================================================
+
+* POINT *
+
+================================================================================================*/
+.index .point-wrap {
+	width: 100%;
+	padding: 8rem 1rem;/*セクションの上下左右のpadding 基本的にセクションの上下は4/8/12/16/20...と4の倍数で調整する*/
+	background: #fafafa;
+}
+.index .point-wrap .item-wrap {
+	width: 100%;
+}
+
+/* アイテム ================================================*/
+.index .point-wrap .item-wrap .item {
+	width: 31%;
+	margin-bottom: 2rem;
+	opacity: 0;/*透明度を落として、class="on" が付与されるまでは非表示にしておく*/
+	transform: translateY(50px);/*初期表示はY軸に+50pxずらしておく*/
+	transition-duration: 0.35s;/*何秒かけて変化させるか*/
+	transition-timing-function: ease;/*どんな動きで変化させるか*/
+}
+		.index .point-wrap .item-wrap .item.on {/*class="trigger"によってclass="on"が付与された際のスタイル　これがアニメーションになる*/
+			opacity: 1;/*透明度をあげてフェードインしてるように見せる*/
+			transform: translateY(0px);/*Y軸に+50pxずらしておいたものが、+0pxの位置まで移動してくる*/
+			transition-duration: 0.35s;/*何秒かけて変化させるか*/
+			transition-timing-function: ease;/*どんな動きで変化させるか*/
+		}
+
+		/* このままでは全部同時にフェードインしてくるので、ディレイをかけて若干タイミングをずらす ================================================*/
+		/* .item に振ったナンバーを活用する ================================================*/
+		.index .point-wrap .item-wrap .item.no01 {
+			transition-delay: 0s;/*.item.no01 のディレイタイムは0s*/
+		}
+		.index .point-wrap .item-wrap .item.no02 {
+			transition-delay: 0.1s;/*.item.no02 のディレイタイムは0.1s*/
+		}
+		.index .point-wrap .item-wrap .item.no03 {
+			transition-delay: 0.2s;/*.item.no03 のディレイタイムは0.2s*/
+		}
+
+
+/* 画像 ================================================*/
+.index .point-wrap .item-wrap .item .img {
+	height: 200px;/*正方形を作る*/
+	width: 200px;/*正方形を作る*/
+	margin: 0 auto;/*中央に寄せる*/
+	border-radius: 100%;/*円形にする*/
+	margin-bottom: 2rem;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+		/* HTMLで振ったナンバーをもとに画像を設置する ================================================*/
+		.index .point-wrap .item-wrap .item.no01 .img {
+			background-image: url(../../img/smp-img/002.jpg);
+			background-size: cover;
+		}
+		.index .point-wrap .item-wrap .item.no02 .img {
+			background-image: url(../../img/smp-img/003.jpg);
+			background-size: cover;
+		}
+		.index .point-wrap .item-wrap .item.no03 .img {
+			background-image: url(../../img/smp-img/004.jpg);
+			background-size: cover;
+		}
+
+
+/* テキスト ================================================*/
+.index .point-wrap .item-wrap .item .info {
+	width: 100%;
+}
+		.index .point-wrap .item-wrap .item h3.title {
+			width: 100%;
+			font-size: 1.25rem;
+			text-align: center;
+			font-weight: 900;
+			margin-bottom: 1rem;
+		}
+		.index .point-wrap .item-wrap .item p {
+		}
+
+
+/*================================================================================================
+
+* DETAIL *
+
+================================================================================================*/
+.index .detail-wrap {
+	width: 100%;
+}
+
+/* 画像 ================================================*/
+.index .detail-wrap .img-wrap {
+	width: 50%;
+	position: relative;/*親要素にする*/
+}
+		.index .detail-wrap .detail-img {
+			width: 100%;
+			height: 100%;
+			background-image: url(../../img/smp-img/top-bg0202.jpg);
+			/*この二行で親要素に対して中央配置ができる*/
+			content: "";
+			position: absolute;margin: auto;top: 0;right: 0;bottom: 0;left: 0;
+			/*この二行で親要素に対して中央配置ができる*/
+			transition: all 0.5s ease;
+		}
+		.index .detail-wrap .detail-img.on {/*detail-trigger が画面に入るとdetail-imgにonが振られる　その際のスタイル sample-index.js の 37行目*/
+			opacity: 0;/*透明度0にして後ろのレイヤーを見せる狙い*/
+			transition: all 0.5s ease;
+		}
+		.index .detail-wrap .detail-img.no01 {
+			background-image: url(../../img/smp-img/top-bg0202.jpg);
+			z-index: 3;
+		}
+		.index .detail-wrap .detail-img.no02 {
+			background-image: url(../../img/smp-img/005.jpg);
+			background-position: center 55% ;
+			z-index: 2;
+		}
+		.index .detail-wrap .detail-img.no03 {
+			background-image: url(../../img/smp-img/006.jpg);
+			background-position: center 55% ;
+			z-index: 1;
+		}
+
+/* テキスト ================================================*/
+.index .detail-wrap .info {
+	width: 50%;
+	background: #fff;
+	padding: 8rem 1rem;
+}
+.index .detail-wrap .info .inner {
+	width: 100%;
+	max-width: 580px;
+	margin: 0 auto;
+}
+.index .detail-wrap .info .inner .group {
+	padding-top: 3rem;
+	border-top: 1px solid #e0e0e0;
+	margin-bottom: 4rem;
+}
+.index .detail-wrap .info .inner .group h3 {
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	border-left: 0.25rem solid #000;
+	margin-bottom: 1rem;
+}
+/*================================================================================================
+
+* INSTAGRAM FEED *
+
+================================================================================================*/
+.instagram-feed-wrap {
+	background: #fafafa;
+}
+.instashow-gallery .instashow-gallery-media-cover {
+	background-color: rgba(255, 193, 6, 0.8) !important;
+}
+.instashow-gallery .instashow-gallery-media-counter, .instashow-gallery .instashow-gallery-media-info-counter, .instashow-gallery .instashow-gallery-media-info-description {
+	color: #fff !important;
+	font-weight: 700;
+}
+
+.instashow-gallery-view-active .instashow-gallery-media, .instashow-gallery-view-active-next .instashow-gallery-media, .instashow-gallery-view-active-prev .instashow-gallery-media {
+	padding: 0px !important;
+}
+.instashow-gallery-slide .instashow-gallery-view-active, .instashow-gallery-slide .instashow-gallery-view-active-next, .instashow-gallery-slide .instashow-gallery-view-active-prev {
+	padding: 0px !important;
+}
+
+.instashow-popup-wrapper {
+	padding: 1rem !important;
+}
+
+/*================================================================================================
+
+* PLUGIN *
+
+================================================================================================*/
+.index .plugin-wrap {
+	width: 100%;
+	padding: 8rem 1rem;/*セクションの上下左右のpadding 基本的にセクションの上下は4/8/12/16/20...と4の倍数で調整する*/
+	background: #f5f5f5;
+}
+
+.index .plugin-wrap .item {
+	width: calc(50% - 1rem);/*calc を使うと 計算式を用いて横幅等を指定できるようになる。ここは 50% から 1rem=15px を引いた大きさになる*/
+	background: #fff;
+	margin-bottom: 2rem;
+	padding: 2rem 1rem;
+}
+.index .plugin-wrap .item h3 {
+	font-weight: 900;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #e0e0e0;
+}

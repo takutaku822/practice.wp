@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+h1,h2,h3,h4,h5 {
+	color: #000;
+	font-family: "Montserrat","Noto sans japanese";
+}
+
+
+/*================================================================================================
+
+* FOOTER *
+
+================================================================================================*/
+.footer {
+	width: 100%;
+	padding: 2rem 1rem;
+	background: #000;
+}
+
+
+/*================================================================================================
+
+* ハイライト *
+
+================================================================================================*/
+span.line {
+    background: rgba(0, 0, 0, 0) linear-gradient(transparent 70%, #FFEE58 0%) repeat scroll 0 0;
+    padding: 0 0.5rem;
+    font-weight: 700;
+}
+
+/*================================================================================================
+
+* SECTION TITLE *
+
+================================================================================================*/
+h2.section-title {
+	font-size: 3rem;
+	text-align: center;
+	margin-bottom: 3rem;
+	font-family: "Oswald","Noto sans japanese";
+}
+
+
+/*================================================================================================
+
+* LINK BTN *
+
+================================================================================================*/
+a.link-btn {/*まずはリンクボタンの大体の形を成形する*/
+	width: 100%;
+	max-width: 180px;/*最大幅180px*/
+	padding: 0.8rem 1rem;/*上下の余白指定*/
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	background: #00B0FF;
+	display: block;
+	border-radius: 3px;/*角丸*/
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	transition: all 0.35s ease;
+}
+		a.link-btn:hover {/*ホバーした際のスタイル*/
+			background: #0091EA;
+			transform: translateY(2px);/*2px下に動く*/
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);/*影が縮まる*/
+			transition: all 0.35s ease;
+		}
+
+
+/* 中央寄せ ================================================*/
+a.link-btn.center {
+	margin: 0 auto;
+}
+
+/* 右寄せ ================================================*/
+a.link-btn.right {
+	margin: 0 0 0 auto;
+}
+
+/* Mサイズ ================================================*/
+a.link-btn.medium {
+	max-width: 230px;/*最大幅230px*/
+}
+
+/* 矢印 ================================================*/
+
+a.link-btn span {/*矢印を出す位置の親となるもの。このSPANでボタン内のテキストを括る*/
+	position: relative;
+}
+		a.link-btn span::after {/*矢印の先端部分*/
+			width: 10px;/*横10px*/
+			height: 10px;/*縦10pxの正方形を作り*/
+			border-top: 2px solid #fff;/*上辺と*/
+			border-right: 2px solid #fff;/*右側に2pxのボーダーを引く*/
+			content: "";
+			position: absolute;margin: auto;top: -2px;right: -2rem;bottom: 0;/*absolute配置で表示位置を指定*/
+			transform: translateX(0px) rotate(45deg);/*45度回転させると完成*/
+			transition: all 0.35s ease;
+		}
+		a.link-btn span::before {/*矢印の横線部分*/
+			width: 15px;/*横幅15px*/
+			height: 2px;/*高さ2pxの長方形を作り*/
+			background: #fff;/*背景色を白にする*/
+			content: "";
+			position: absolute;margin: auto;top: -2px;right: -2rem;bottom: 0;/*absolute配置で表示位置を指定*/
+			transition: all 0.35s ease;
+		}
+
+a.link-btn:hover span::after {/*ボタンをホバーした際の矢印の先端部分の動き*/
+	transform: translateX(10px) rotate(45deg);/*横に10px動く*/
+	transition: all 0.35s ease;
+}
+a.link-btn:hover span::before {/*ボタンをホバーした際の矢印の横線部分の動き*/
+	transform: translateX(10px) rotate(0deg);/*横に10px動く*/
+	transition: all 0.35s ease;
+}

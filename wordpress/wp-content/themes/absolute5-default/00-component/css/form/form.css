@@ -1,0 +1,227 @@
+@charset "utf-8";
+.ajax-loader{
+	display: none;
+}
+button, textarea, select {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+::-webkit-input-placeholder{
+	font-style: italic;
+	font-size: 0.707rem;
+}
+:-ms-input-placeholder{
+	font-style: italic;
+	font-size: 0.707rem;
+}
+::-moz-placeholder{
+	font-style: italic;
+	font-size: 0.707rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+input[type="checkbox"],
+input[type="radio"]{
+   -webkit-transform: scale(1.3);
+   transform: scale(1.3);
+}
+input[type="reset"]{
+	background: #fff;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	padding: 0.707rem;
+	color: #f33d3d;
+	font-weight: normal;
+	border: 1px solid #f33d3d;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	transition:.5s;
+}
+input[type="submit"]:disabled{
+	background: #fff;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	padding: 0.707rem;
+	color: #f33d3d;
+	font-weight: normal;
+	border: 1px solid #f33d3d;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	transition:.5s;
+}
+input[type="submit"]{
+	background: #f33d3d;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	padding: 0.707rem;
+	color: #fff;
+	font-weight: bold;
+	border: 1px solid #f33d3d;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	transition:.5s;
+}
+.wpcf7-response-output{/*contact form 7 の 送信結果MESSAGE*/
+	max-width: 480px;
+	margin: 0 auto !important;
+	float: none;
+	margin-top: 0.707rem !important;
+	padding: 1.4142rem !important;
+}
+div.wpcf7-mail-sent-ok {/*contact form 7 の 送信成功MESSAGE*/
+    border: 0px solid #398f14 !important;
+    background: #fff !important;
+	border: 1px solid #f33d3d !important;
+    color: #f33d3d;
+}
+div.wpcf7-validation-errors {/*contact form 7 の 送信失敗MESSAGE*/
+    border: 0px solid #f7e700 !important;
+    background: #f33d3d !important;
+    color: #fff;
+}
+.wpcf7-not-valid-tip{/*contact form 7 の エラーアラート*/
+	font-size: 1rem !important;
+	color: #f33d3d !important;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+}
+/*================================================
+
+* form *
+
+================================================*/
+.form-wrap{
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 4.242rem 1.4142rem;
+	background: #f0f0f0;
+}
+.form-container{
+	width: 100%;
+}
+.form-inner{
+	width: 47%;
+	margin: 1.5%;
+	float: left;
+}
+.form-wrap .grid02{
+	float: left;
+	z-index: 9990;
+}
+.ajax-loader{
+	display: none;
+}
+.form-box{
+	margin-bottom: 0.707rem;
+}
+.form-box .label-zero,
+.form-box .label-one,
+.form-box .label-two,
+.form-box .label-three,
+.form-box .label-four,
+.form-box .label-five,
+.form-box .label-six{
+	width: 30%;
+	color: #fff;
+	background: #444;
+	padding: 0.707rem;
+	font-family: "font02-h";
+	vertical-align: top;
+	transition:.5s;
+	float: left;
+}
+.form-box .label-zero.focus,
+.form-box .label-one.focus,
+.form-box .label-two.focus,
+.form-box .label-three.focus,
+.form-box .label-four.focus,
+.form-box .label-five.focus,
+.form-box .label-six.focus{
+	background: #f33d3d;
+	transition:.5s;
+}
+.form-box .input{
+	width: 70%;
+	background: #f7f7f7;
+	vertical-align: top;
+	padding: 0.707rem;
+	float: left;
+}
+.form-box .input div{
+	width: 40%;
+}
+.conform{
+	width: 100%;
+	background: #f7f7f7;
+	text-align: center;
+	padding: 1.4142rem;
+	color: #777;
+	margin-bottom: 0.707rem;
+}
+.conform p{
+font-size: 0.707rem;
+padding-bottom: 0.707rem;
+margin-bottom: 0.707rem;
+border-bottom: 1px solid #ddd;
+}
+.submit-wrap{
+	width: 100%;
+	max-width: 380px;
+	margin: 0 auto;
+}
+
+
+
+/* ** */
+@media only screen and (max-width: 1024px) {
+
+/* ** */}
+
+@media only screen and (max-width: 768px) {
+
+/* ** */}
+
+
+@media only screen and (max-width: 480px) {
+
+/* ** */}

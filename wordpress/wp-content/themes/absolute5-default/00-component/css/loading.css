@@ -1,0 +1,526 @@
+@charset "utf-8";
+
+
+/* ローディング中一瞬ページが見えてしまう対策 ================================================*/
+.root-wrap.nowloading {
+	opacity: 0;
+}
+.root-wrap  {
+	opacity: 1;
+}
+/*================================================================================================
+
+* LOADING - COMPONENT *
+
+================================================================================================*/
+
+/* ローディンング終了のスタイル ================================================*/
+body .loading-wrap {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 9999;
+	padding: 2rem;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.5s ease;
+}
+
+/* ローディンング中のスタイル ================================================*/
+body.trans .loading-wrap {
+	opacity: 1;
+	pointer-events: auto;
+	transition: all 0.5s ease;
+}
+
+.loading-wrap .inner {
+	width: 100%;
+	height: 100%;
+}
+.loading-wrap .inner > div {
+	transform: translateY(-8rem);
+}
+/*================================================================================================
+
+* PATTERN 01 *	回転するサークル
+
+================================================================================================*/
+.loading-wrap .pattern01 {
+	width: 100%;
+	max-width: 280px;
+	margin-bottom: 0 auto;
+}
+.loading-wrap .pattern01 .circle {
+	width: 35px;
+	height: 35px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* circle共通 ================================================*/
+.loading-wrap .pattern01 .circle::before,
+.loading-wrap .pattern01 .circle::after {
+	width: 35px;
+	height: 35px;
+	margin: 0 auto;
+	content: "";
+	border: 8px solid;
+	border-radius: 100%;
+	z-index: 9999;
+	position: absolute;margin: auto;top: 0;right: 0;bottom: 0;left: 0;
+}
+
+/* サークルバック ================================================*/
+.loading-wrap .pattern01 .circle::before {
+	border-color: #e0e0e0;
+}
+
+/* サークル回転 ================================================*/
+.loading-wrap .pattern01 .circle::after {
+	border-color: #00B0FF;
+	border-right-color: #e0e0e0;
+	animation-duration: 1.25s;
+	animation-name: pattern01;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes pattern01 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+
+/*================================================================================================
+
+* PATTERN 02 *		点滅するランプ
+
+================================================================================================*/
+.loading-wrap .pattern02 {
+	width: 100%;
+	max-width: 280px;
+	padding: 1rem;
+	margin: 0 auto;
+}
+
+/* 小さい方 ================================================*/
+.loading-wrap .pattern02 .circle {
+	width: 20px;
+	height: 20px;
+	background: #00B0FF;
+	margin: 0 auto;
+	border-radius: 100%;
+	content: "";
+	position: absolute;margin: auto;top: 0;right: 0;bottom: 0;left: 0;
+	animation-duration: 1.25s;
+	animation-name: pattern02;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+/* 大きい方 ================================================*/
+.loading-wrap .pattern02 .circle-shadow {
+	width: 100px;
+	height: 100px;
+	background: #00B0FF;
+	margin: 0 auto;
+	border-radius: 100%;
+	content: "";
+	opacity: 0.4;
+	transform: scale(1.5);
+	position: absolute;margin: auto;top: 0;right: 0;bottom: 0;left: 0;
+	animation-duration: 1.25s;
+	animation-name: pattern02-shadow;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes pattern02 {
+	0% {
+		-webkit-transform: scale(0.8);
+		-ms-transform: scale(0.8);
+		-o-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+	50% {
+		-webkit-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+	100% {
+		-webkit-transform: scale(0.8);
+		-ms-transform: scale(0.8);
+		-o-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+}
+@keyframes pattern02-shadow {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		-o-transform: scale(0);
+		transform: scale(0);
+	}
+	50% {
+		opacity: 0.25;
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(0.8);
+		-ms-transform: scale(0.8);
+		-o-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+}
+
+
+/*================================================================================================
+
+* PATTERN 03 *	テキストアニメーション
+
+================================================================================================*/
+.loading-wrap .pattern03 {
+	width: 100%;
+	max-width: 280px;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: 900;
+	letter-spacing: 3px;
+}
+.loading-wrap .pattern03 span {
+	font-size: 1.25rem;
+	color: #00B0FF;
+	opacity: 0;
+	animation-duration: 2s;
+	animation-delay: 0s;
+	animation-name: pattern03;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+		/* ディレイ設定 ================================================*/
+		.loading-wrap .pattern03 span.no01 {
+			animation-delay: 0s;
+		}
+		.loading-wrap .pattern03 span.no02 {
+			animation-delay: 0.1s;
+		}
+		.loading-wrap .pattern03 span.no03 {
+			animation-delay: 0.2s;
+		}
+		.loading-wrap .pattern03 span.no04 {
+			animation-delay: 0.3s;
+		}
+		.loading-wrap .pattern03 span.no05 {
+			animation-delay: 0.4s;
+		}
+		.loading-wrap .pattern03 span.no06 {
+			animation-delay: 0.5s;
+		}
+		.loading-wrap .pattern03 span.no07 {
+			animation-delay: 0.6s;
+		}
+		.loading-wrap .pattern03 span.no08 {
+			animation-delay: 0.7s;
+		}
+
+@keyframes pattern03 {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/*================================================================================================
+
+* PATTERN 04 *	バーが右往左往
+
+================================================================================================*/
+.loading-wrap .pattern04 {
+	width: 100%;
+	max-width: 180px;
+	padding: 1rem;
+	margin: 0 auto;
+}
+.loading-wrap .pattern04 .bar {
+	width: 100%;
+	height: 15px;
+	background: #eee;
+	position: relative;
+}
+.loading-wrap .pattern04 .bar::after {
+	width: 100%;
+	height: 15px;
+	background: #00B0FF;
+	content: "";
+	position: absolute;margin: auto;top: 0;right: 0;bottom: 0;left: 0;
+	animation-duration: 3s;
+	animation-delay: 0s;
+	animation-name: pattern04;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes pattern04 {
+	0% {
+		-webkit-transform-origin: left;
+		-ms-transform-origin: left;
+		-o-transform-origin: left;
+		transform-origin: left;
+		-webkit-transform: scaleX(0);
+		-ms-transform: scaleX(0);
+		-o-transform: scaleX(0);
+		transform: scaleX(0);
+	}
+	12.5% {
+		-webkit-transform-origin: left;
+		-ms-transform-origin: left;
+		-o-transform-origin: left;
+		transform-origin: left;
+		-webkit-transform: scaleX(1);
+		-ms-transform: scaleX(1);
+		-o-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+	25% {
+		-webkit-transform-origin: right;
+		-ms-transform-origin: right;
+		-o-transform-origin: right;
+		transform-origin: right;
+		-webkit-transform: scaleX(1);
+		-ms-transform: scaleX(1);
+		-o-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+	37.5% {
+		-webkit-transform-origin: right;
+		-ms-transform-origin: right;
+		-o-transform-origin: right;
+		transform-origin: right;
+		-webkit-transform: scaleX(0);
+		-ms-transform: scaleX(0);
+		-o-transform: scaleX(0);
+		transform: scaleX(0);
+	}
+	50% {
+		-webkit-transform-origin: right;
+		-ms-transform-origin: right;
+		-o-transform-origin: right;
+		transform-origin: right;
+		-webkit-transform: scaleX(0);
+		-ms-transform: scaleX(0);
+		-o-transform: scaleX(0);
+		transform: scaleX(0);
+	}
+	62.5% {
+		-webkit-transform-origin: right;
+		-ms-transform-origin: right;
+		-o-transform-origin: right;
+		transform-origin: right;
+		-webkit-transform: scaleX(1);
+		-ms-transform: scaleX(1);
+		-o-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+	75% {
+		-webkit-transform-origin: left;
+		-ms-transform-origin: left;
+		-o-transform-origin: left;
+		transform-origin: left;
+		-webkit-transform: scaleX(1);
+		-ms-transform: scaleX(1);
+		-o-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+	87.5% {
+		-webkit-transform-origin: left;
+		-ms-transform-origin: left;
+		-o-transform-origin: left;
+		transform-origin: left;
+		-webkit-transform: scaleX(0);
+		-ms-transform: scaleX(0);
+		-o-transform: scaleX(0);
+		transform: scaleX(0);
+	}
+	100% {
+		-webkit-transform-origin: left;
+		-ms-transform-origin: left;
+		-o-transform-origin: left;
+		transform-origin: left;
+		-webkit-transform: scaleX(0);
+		-ms-transform: scaleX(0);
+		-o-transform: scaleX(0);
+		transform: scaleX(0);
+	}
+}
+
+/*================================================================================================
+
+* LOADING CURTAIN - COMPONENT *
+
+================================================================================================*/
+body .loading-curtain-wrap {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 9998;
+	pointer-events: none;
+}
+
+/*================================================================================================
+
+* LOADING CURTAIN - PATTERN 01 *	上下から閉まる
+
+================================================================================================*/
+
+body .loading-curtain-wrap.pattern01 > div {
+	width: 100%;
+	height: 50%;
+	background: #fff;
+	pointer-events: none;
+}
+		body .loading-curtain-wrap.pattern01 > div.top {
+			position: absolute;margin: auto;top: 0;right: 0;bottom: auto;left: 0;
+			transform: translateY(-110%);
+			transition: all 0.35s ease;
+		}
+		body.trans .loading-curtain-wrap.pattern01 > div.top {
+			transform: translateY(0%);
+			transition: all 0.35s ease;
+		}
+		body .loading-curtain-wrap.pattern01 > div.bottom {
+			position: absolute;margin: auto;top: auto;right: 0;bottom: 0;left: 0;
+			transform: translateY(110%);
+			transition: all 0.35s ease;
+		}
+		body.trans .loading-curtain-wrap.pattern01 > div.bottom {
+			transform: translateY(0%);
+			transition: all 0.35s ease;
+		}
+
+/*================================================================================================
+
+* LOADING CURTAIN - PATTERN 02 *	左右から閉まる
+
+================================================================================================*/
+
+body .loading-curtain-wrap.pattern02 > div {
+	width: 50%;
+	height: 100%;
+	background: #fff;
+	pointer-events: none;
+}
+		body .loading-curtain-wrap.pattern02 > div.left {
+			position: absolute;margin: auto;top: 0;right: auto;bottom: 0;left: 0;
+			transform: translateX(-110%);
+			transition: all 0.35s ease;
+		}
+			body.trans .loading-curtain-wrap.pattern02 > div.left {
+				transform: translateX(0%);
+				transition: all 0.35s ease;
+			}
+
+		body .loading-curtain-wrap.pattern02 > div.right {
+			position: absolute;margin: auto;top: auto;right: 0;bottom: 0;left: auto;
+			transform: translateX(110%);
+			transition: all 0.35s ease;
+		}
+			body.trans .loading-curtain-wrap.pattern02 > div.right {
+				transform: translateX(0%);
+				transition: all 0.35s ease;
+			}
+
+
+/*================================================================================================
+
+* LOADING CURTAIN - PATTERN 03 *	左から閉まる
+
+================================================================================================*/
+
+body .loading-curtain-wrap.pattern03 > div {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: absolute;margin: auto;top: 0;right: auto;bottom: 0;left: 0;
+	transform: translateX(-110%);
+	transition: all 0.5s ease;
+	pointer-events: none;
+}
+		body.trans .loading-curtain-wrap.pattern03 > div {
+			transform: translateX(0%);
+			transition: all 0.5s ease;
+			pointer-events: none;
+		}
+
+/*================================================================================================
+
+* LOADING CURTAIN - PATTERN 03 *	右から閉まる
+
+================================================================================================*/
+
+body .loading-curtain-wrap.pattern04 > div {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: absolute;margin: auto;top: 0;right: auto;bottom: 0;left: 0;
+	transform: translateX(110%);
+	transition: all 0.5s ease;
+	pointer-events: none;
+}
+		body.trans .loading-curtain-wrap.pattern04 > div {
+			transform: translateX(0%);
+			transition: all 0.5s ease;
+			pointer-events: none;
+		}
+
+
+/*================================================================================================
+
+* LOADING CIRCLE *	円が膨らむ
+
+================================================================================================*/
+body .loading-circle {
+	width: 200px;
+	height: 200px;
+	background: #fff568;
+	transform: scale(0);
+	transition: all 0.5s ease;
+	position: fixed;
+	z-index: 9999;
+	border-radius: 100%;
+	margin: auto;top: 0;right: 0;bottom: 0;left: 0;
+}
+
+body.trans .loading-circle {
+	transform: scale(15);
+	transition: all 0.5s ease;
+}
+
+

@@ -1,0 +1,280 @@
+@charset "utf-8";
+
+/*================================================================================================
+
+* MAIN CONTENTS *
+
+================================================================================================*/
+.single-page .contents {
+	width: 100%;
+	padding: 8rem 1rem;
+	background: #fafafa;
+}
+
+
+/*================================================================================================
+
+* POST WRAP *
+
+================================================================================================*/
+
+.single-page .post-wrap {
+	width: 100%;
+	background: #fff;
+	padding: 4rem 1rem;
+}
+
+.single-page .post-wrap > .inner {
+	width: 100%;
+	max-width: 680px;
+	margin: 0 auto;
+}
+
+.single-page .post-wrap .group {
+	width: 100%;
+	padding: 4rem 0rem 0rem 0rem;
+	margin-top: 4rem;
+	border-top: 1px solid #e0e0e0;
+}
+.single-page .post-wrap .group.small {
+	padding: 2rem 0rem 0rem 0rem;
+}
+
+/* 時間 ================================================*/
+.single-page .post-wrap .time {
+	width: 100%;
+}
+.single-page .post-wrap .time p {
+	font-weight: 900;
+	color: #c4c4c4;
+}
+
+/* タイトル ================================================*/
+.single-page .post-wrap .title {
+	width: 100%;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid #e0e0e0;
+}
+.single-page .post-wrap .title h2 {
+	font-size: 1.5rem;
+}
+
+/* 本文 ================================================*/
+.single-page .post-wrap .sentence {
+	width: 100%;
+}
+
+.single-page .post-wrap .sentence h2 {
+	width: 100%;
+	padding: 1rem;
+	background: #fafafa;
+	font-size: 1.25rem;
+	border-left: 2px solid #000;
+	margin-bottom: 2rem;
+	margin-top: 8rem;
+}
+.single-page .post-wrap .sentence h2:first-child {
+	margin-top: 0rem;
+}
+
+.single-page .post-wrap .sentence h3 {
+	width: 100%;
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+}
+
+.single-page .post-wrap .sentence p {
+	margin-bottom: 2rem;
+}
+
+
+/*================================================================================================
+
+* FB LINKE - 通常 *
+
+================================================================================================*/
+.fb-like-wrap {
+	width: 100%;
+	background: #4f4f4f;
+	position: relative;
+}
+
+/* 画像 ================================================*/
+.fb-like-wrap .img-wrap {
+	width: 50%;
+	position: relative;
+	overflow: hidden;
+}
+.fb-like-wrap .img {
+	width: 100%;
+	height: 100%;
+	opacity: 0.6;
+	content: "";
+	position: absolute;margin: auto;top: 0;right: 0;bottom: 0;left: 0;
+	transition: all 0.5s ease;
+}
+		.fb-like-wrap:hover .img {
+			opacity: 1;
+			transform: scale(1.06);
+			transition: all 0.5s ease;
+		}
+
+/* テキスト ================================================*/
+.fb-like-wrap .text {
+	width: 50%;
+	text-align: center;
+	padding: 4rem 1rem;
+}
+		.fb-like-wrap .text p {
+			font-weight: 900;
+			color: #fff;
+			font-size: 1.25rem;
+			margin-bottom: 0.5rem;
+		}
+
+
+/*================================================================================================
+
+* FB LINKE - ラージ *
+
+================================================================================================*/
+
+/* 画像 ================================================*/
+.fb-like-wrap.large .img-wrap {
+	width: 100%;
+	padding: 8rem 1rem;
+	position: relative;
+	overflow: hidden;
+}
+		.fb-like-wrap.large:hover .img {
+			opacity: 0.8;
+			transform: scale(1.06);
+			transition: all 0.5s ease;
+		}
+/* テキスト ================================================*/
+.fb-like-wrap.large .text {
+	width: 100%;
+	position: absolute;margin: auto;top: 0;right: 0;bottom: 0;left: 0;
+}
+
+/*================================================================================================
+
+* SHARE BTN *
+
+================================================================================================*/
+.share-btn-wrap {
+	width: 100%;
+	max-width: 280px;
+	margin: 0 auto;
+}
+.share-btn-wrap a.item {
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background: #ddd;
+	position: relative;
+}
+
+.share-btn-wrap a.item img {
+	width: 100%;
+	position: absolute;margin: auto;top: 0;right: 0;bottom: 0;left: 0;
+}
+
+/* SETTING ================================================*/
+.share-btn-wrap a.item.fb {
+	background: #3b5998;
+}
+	.share-btn-wrap a.item.fb img {
+		max-width: 10px;
+	}
+
+.share-btn-wrap a.item.tw {
+	background: #1da1f2;
+}
+	.share-btn-wrap a.item.tw img {
+		max-width: 22px;
+	}
+
+.share-btn-wrap a.item.go {
+	background: #dd4b39;
+}
+	.share-btn-wrap a.item.go img {
+		max-width: 22px;
+	}
+
+.share-btn-wrap a.item.li {
+	background: #00c300;
+}
+	.share-btn-wrap a.item.li img {
+		max-width: 20px;
+	}
+
+.share-btn-wrap a.item.po {
+	background: #ef4056;
+}
+	.share-btn-wrap a.item.po img {
+		max-width: 18px;
+		top: 2px;
+	}
+
+/*================================================================================================
+
+* ページャー *
+
+================================================================================================*/
+.single-page .pager-wrap {
+	width: 100%;
+	position: relative;
+	margin-bottom: 2rem;
+}
+
+.single-page .pager-wrap .box {
+	width: 50%;
+}
+.single-page .pager-wrap .box a {
+	width: 100%;
+	padding: 0rem 2rem;
+	display: block;
+	font-size: 0.8rem;
+	position: relative;
+}
+.single-page .pager-wrap .box.next a {
+	padding-left: 4rem;
+	border-right: 1px solid #e0e0e0;
+}
+		.single-page .pager-wrap .box.next a::after {
+			width: 15px;
+			height: 15px;
+			border-top: 2px solid;
+			border-left: 2px solid;
+			content: "";
+			position: absolute;margin: auto;top: 0;right: auto;bottom: 0;left: 1rem;
+			transform: rotate(-45deg);
+		}
+.single-page .pager-wrap .box.prev a {
+	text-align: right;
+	padding-right: 4rem;
+}
+		.single-page .pager-wrap .box.prev a::after {
+			width: 15px;
+			height: 15px;
+			border-top: 2px solid;
+			border-left: 2px solid;
+			content: "";
+			position: absolute;margin: auto;top: 0;right: 1rem;bottom: 0;left: auto;
+			transform: rotate(135deg);
+		}
+
+
+/*================================================================================================
+
+* メディアクエリ *
+
+================================================================================================*/
+@media only screen and (max-width: 1024px) {
+/********************/}
+@media only screen and (max-width: 768px) {
+/********************/}
+@media only screen and (max-width: 480px) {
+/********************/}

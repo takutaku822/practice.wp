@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/*ダッシュボードのビジュアルエディタのスタイル*/
+p {
+	font-family: 'Noto Sans Japanese', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+h2 {
+	font-family: 'Noto Sans Japanese';
+	color: #000;
+	font-size: 1.25rem;
+	border-left: 2px solid;
+	background: #fafafa;
+	font-weight: 500;
+	padding: 1.5rem 1rem;
+	margin-top: 4rem;
+	margin-bottom: 1rem;
+}
+h3 {
+	font-family: 'Noto Sans Japanese';
+	color: #000;
+	font-size: 1.25rem;
+	padding: 1.5rem 0rem;
+}
+img {
+	margin: 2rem 0;
+	max-width: 380px;
+}
+

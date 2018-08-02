@@ -1,0 +1,180 @@
+/*
+Theme Name: ABSOLUTE 5
+Theme URI: http://launchcraft.jp
+Description: ABUSOLUTE 5
+Version: 2.2.0
+Author: HARUHARA
+Author URI: http://launchcraft.jp
+*/
+
+@charset "utf-8";
+
+/*================================================================================================
+
+* RESET *
+
+================================================================================================*/
+
+
+/* Asterisk ================================================*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* LINK ================================================*/
+a {
+	text-decoration: none;
+	outline:none;
+}
+
+/* IMG ================================================*/
+img {
+	width: 100%;
+	height: auto;
+	border: none;
+	vertical-align: middle;
+}
+
+/* hr ================================================*/
+hr {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* h ================================================*/
+h1,h2,h3,h4,h5,h6,p {
+	padding: 0rem;
+	margin: 0rem;
+	font-size: 1rem;
+	font-family: "Montserrat","Noto sans japanese";
+	font-weight: normal;
+	line-height: 1.75em;
+}
+
+/* 構造タグ ================================================*/
+article,aside,details,footer,header,main,menu,nav,section,summary {
+	display: block;
+}
+
+/* ul ================================================*/
+ul,ol {
+	list-style: none;
+}
+ul{
+	font-size: 0;
+}
+ul li{
+		font-size: 1rem;
+		margin: 0rem;
+		display: inline-block;
+}
+
+/*================================================================================================
+
+* BASE *
+
+================================================================================================*/
+*,
+*:after,
+*::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html{
+	width: 100%;
+	font-size: 15px;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	width: 100%;
+	font-weight: normal;
+	color: rgba(110,110,110,1);
+	font-family: 'Montserrat', 'Noto Sans Japanese', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	overflow-x: hidden;
+	line-height: 1.75em;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*================================================================================================
+
+* LINK *
+
+================================================================================================*/
+a,
+a:link {
+	color: #00B0FF;
+}
+
+a:visited {
+	color: #00B0FF;
+}
+
+a:active {
+	color: #00B0FF;
+}
+
+a:hover {
+	color: #00B0FF;
+}
+
+a:focus {
+	outline: none;
+}
+
+/*================================================================================================
+
+* SELECTION *
+
+================================================================================================*/
+
+::selection {
+	background:#f33d3d; /* Safari */
+	color: #fff; /*文字色*/
+}
+
+::-moz-selection {
+	background:#f33d3d; /* Safari */
+	color: #fff; /*文字色*/
+}
+/*================================================================================================
+
+* GLOBAL *
+
+================================================================================================*/
+
+.root-wrap{
+	width: 100%;
+	overflow: hidden;
+}
+
+/* INNER ================================================*/
+.p768{
+	max-width: 768px;
+	margin: 0 auto;
+}
+.p960{
+	max-width: 960px;
+	margin: 0 auto;
+}
+.p1024{
+	max-width: 1024px;
+	margin: 0 auto;
+}
+.p1240{
+	max-width: 1240px;
+	margin: 0 auto;
+}
+
+/* ** */
+@media only screen and (max-width: 1024px) {
+/* ** */}
+@media only screen and (max-width: 768px) {
+/* ** */}
+@media only screen and (max-width: 480px) {
+/* ** */}

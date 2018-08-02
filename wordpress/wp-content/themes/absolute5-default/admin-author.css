@@ -1,0 +1,52 @@
+@charset "utf-8";
+/*クライアント用ダッシュボードのスタイル*/
+
+#acf_118.acf_postbox.no_box,
+#acf_126.acf_postbox.no_box,
+#acf_143.acf_postbox.no_box,
+#acf_154.acf_postbox.no_box{/* META投稿欄の背景色 フィールドグループのIDが#acf_[@@@]に入る */
+	background: #efefef !important;
+}
+
+#adminmenu li.wp-menu-separator{
+	padding: 10px !important;
+	margin-bottom: 0px !important;
+}
+#adminmenu li.wp-menu-separator{
+	height: auto !important;
+}
+
+#titlediv::before{
+	content:"タイトルは未入力でも更新可能ですが、後に編集が必要になった際に判別が難しくなります。入力しておく事をお勧めします。";
+}
+
+#adminmenu li.wp-menu-separator{
+	height: auto !important;
+}
+#wpseo_meta,
+.update-nag,
+.wp-core-ui .notice.is-dismissible{
+	display: none !important;
+}
+
+#wpbody-content{
+	padding-top: 60px;
+}
+#content_ifr,
+input#title{
+	border: 1px solid #ddd !important;
+}
+
+#content_ifr{
+	padding: 0rem 1rem !important;
+}
+#post-body-content > h1 {/*タイトル下のマージン*/
+	margin-bottom: 20px !important;
+}
+.acf-image-uploader {/* 画像アップロードプレビューの最大横幅 */
+	width: 100% !important;
+	max-width: 300px !important;
+}
+#wpseo_meta {/* SEO META BOXの非表示 */
+	display: none;
+}

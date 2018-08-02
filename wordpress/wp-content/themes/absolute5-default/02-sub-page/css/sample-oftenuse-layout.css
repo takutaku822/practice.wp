@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+.oftenuse-page p.text-box {
+	padding: 0rem 0 4rem 0;
+}
+
+/*================================================================================================
+
+* CASE 1 - 画像付きのカードレイアウト (3列) *
+
+================================================================================================*/
+
+/* カード梱包要素 ================================================*/
+.sample-card-wrap {
+	width: 100%;/*横幅100%まで伸びるが*/
+	max-width: 960px;/*上限は960pxまで*/
+	margin: 0 auto;/*真ん中に寄せる*/
+}
+
+@media only screen and (max-width: 768px) {/*iPad 以下で閲覧時のスタイル*/
+
+.sample-card-wrap {
+	max-width: 380px;/*最大幅を変更*/
+}
+
+/********************/}
+
+/* カード ================================================*/
+.sample-card-wrap .card {
+	width: calc(33% - 15px); /*3列にしたいので100%を3で割る calcを使えば数式で横幅を設定できる。ここでは33%から15px引かれたものを作っている。*/
+	background: #fff;
+}
+
+@media only screen and (max-width: 768px) {/*iPad 以下で閲覧時のスタイル*/
+.sample-card-wrap .card {
+	width: 100%; /*横幅いっぱい、つまりワンカラムに変更*/
+	margin-bottom: 4rem; /*下方マージンを設定*/
+}
+.sample-card-wrap .card:last-child {/*.sample-card-wrap の中の .card の最後の要素を指定*/
+	margin-bottom: 0rem; /*最後の.card には下方マージンが必要ないのでリセット*/
+}
+/********************/}
+
+
+
+/* 画像部分 ================================================*/
+.sample-card-wrap .card .img {
+	width: 100%; /*カードの中で100%横幅いっぱいに広がる*/
+	height: 180px; /*高さ180px*/
+	background-repeat: no-repeat; /*背景画像の共通になる要素は設定しておく*/
+	background-position: center; /*背景画像の共通になる要素は設定しておく*/
+}
+		/* カクカードの画像を設定 ================================================*/
+		.sample-card-wrap .card.no01 .img {
+			background-image: url("https://source.unsplash.com/1600x900/?baby");
+			background-size: cover; /*background-sizeだけは個別に設定しないと効かないのでbackground-imageとセットで設定していく*/
+		}
+		.sample-card-wrap .card.no02 .img {
+			background-image: url("https://source.unsplash.com/1600x900/?girl");
+			background-size: cover; /*background-sizeだけは個別に設定しないと効かないのでbackground-imageとセットで設定していく*/
+		}
+		.sample-card-wrap .card.no03 .img {
+			background-image: url("https://source.unsplash.com/1600x900/?sweets");
+			background-size: cover; /*background-sizeだけは個別に設定しないと効かないのでbackground-imageとセットで設定していく*/
+		}
+
+/* テキスト部分梱包要素 ================================================*/
+.sample-card-wrap .card .info {
+	width: 100%; /*カードの中で100%横幅いっぱいに広がる*/
+	padding: 2rem 1rem; /*余白設定*/
+}
+
+/* タイトル部分 ================================================*/
+.sample-card-wrap .card .info .title {
+	width: 100%; /*カードの中で100%横幅いっぱいに広がる*/
+}
+.sample-card-wrap .card .info .title h3 {
+	margin-bottom: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+/* センテンス部分 ================================================*/
+.sample-card-wrap .card .info .sentence {
+	width: 100%; /*カードの中で100%横幅いっぱいに広がる*/
+}
+.sample-card-wrap .card .info .sentence p {
+	font-size: 0.8rem;
+}
+
+
+@media only screen and (max-width: 1024px) {/*iPad pro 以下で閲覧時のスタイル*/
+/********************/}
+@media only screen and (max-width: 768px) {/*iPad 以下で閲覧時のスタイル*/
+/********************/}
+@media only screen and (max-width: 480px) {/*iPhone 6/7/8 以下で閲覧時のスタイル*/
+/********************/}
+
+
+
+/*================================================================================================
+
+* CASE 2 - 絶対配置の活用 *
+
+================================================================================================*/
+
+/* 画像部分 ================================================*/
+.sample-card-wrap .card .img {
+	width: 100%;
+	height: 180px;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative; /*親要素にする*/
+}
+/* 画像部分 ================================================*/
+.sample-card-wrap .card .img .label {
+	width: 100%;
+	max-width: 100px;
+	text-align: center;
+	font-weight: 900;
+	position: absolute; /*絶対配置にする*/
+	margin: auto; /*おまじない的なもの。必ず入れる*/
+	top: 5px; /*上から5pxと....*/
+	left: 5px; /*左から5pxの位置に配置*/
+	background: #FFA726;
+	color: #fff;
+}
+
+/*================================================================================================
+
+* CASE 3 - 互い違いレイアウト *
+
+================================================================================================*/
+.alternate-layout .item {
+	width: 100%;
+	max-width: 780px;
+	margin: 0 auto;
+	margin-bottom: 4rem;
+	background-color: #fff;
+}
+		.alternate-layout .item:last-child {/*.alternate-layout の中に入っている .item の最後のものを指定*/
+			margin-bottom: 0rem;/*最後の .item に下方マージンは要らないのでリセット*/
+		}
+
+@media only screen and (max-width: 768px) {/*iPad 以下で閲覧時のスタイル*/
+.alternate-layout .item  {
+	max-width: 580px;/*最大幅を変更*/
+}
+/********************/}
+
+/* 画像部分 ================================================*/
+.alternate-layout .item .img {
+	width: 40%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+		/* 角アイテムの画像を設定 ================================================*/
+		.alternate-layout .item.no01 .img {
+			background-image: url("https://source.unsplash.com/1600x900/?love");
+			background-size: cover; /*background-sizeだけは個別に設定しないと効かないのでbackground-imageとセットで設定していく*/
+		}
+		.alternate-layout .item.no02 .img {
+			background-image: url("https://source.unsplash.com/1600x900/?animal");
+			background-size: cover; /*background-sizeだけは個別に設定しないと効かないのでbackground-imageとセットで設定していく*/
+		}
+		.alternate-layout .item.no03 .img {
+			background-image: url("https://source.unsplash.com/1600x900/?Landscape");
+			background-size: cover; /*background-sizeだけは個別に設定しないと効かないのでbackground-imageとセットで設定していく*/
+		}
+		.alternate-layout .item.no04 .img {
+			background-image: url("https://source.unsplash.com/1600x900/?family");
+			background-size: cover; /*background-sizeだけは個別に設定しないと効かないのでbackground-imageとセットで設定していく*/
+		}
+
+
+@media only screen and (max-width: 768px) {/*iPad 以下で閲覧時のスタイル*/
+.alternate-layout .item .img {
+	width: 100%; /*横幅いっぱいにする*/
+	height: 280px; /*横幅いっぱいにすることで隣の要素がなくなり（ワンカラムになり）、flexの特徴である「横並びの最も高い要素に、高さが自動調整される」がなくなるので、任意で高さをもたせる*/
+}
+/********************/}
+
+
+/* テキスト部分 ================================================*/
+.alternate-layout .item .info {
+	width: 60%;
+	padding: 2rem;
+}
+.alternate-layout .item .info h3 {
+	font-size: 1.25rem;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+@media only screen and (max-width: 768px) {/*iPad 以下で閲覧時のスタイル*/
+.alternate-layout .item .info {
+	width: 100%; /*横幅いっぱいにする*/
+}
+/********************/}

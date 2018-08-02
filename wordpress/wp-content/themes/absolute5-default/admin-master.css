@@ -1,0 +1,33 @@
+@charset "utf-8";
+/*管理者用ダッシュボードのスタイル*/
+
+#acf_118.acf_postbox.no_box,
+#acf_126.acf_postbox.no_box,
+#acf_143.acf_postbox.no_box,
+#acf_154.acf_postbox.no_box{/* META投稿欄の背景色 フィールドグループのIDが#acf_[@@@]に入る */
+	background: #efefef !important;
+}
+
+.submenu{
+	margin-left: 0px !important;
+	padding-left: 0px !important;
+	height: auto !important;
+	width: 100% !important;
+	margin-top: 0px !important;
+	position: static !important;
+}
+
+
+#wpbody-content{
+	padding-top: 60px;
+}
+#content_ifr{
+	padding: 0rem 1rem !important;
+}
+#post-body-content > h1 {/*タイトル下のマージン*/
+	margin-bottom: 20px !important;
+}
+.acf-image-uploader {/* 画像アップロードプレビューの最大横幅 */
+	width: 100% !important;
+	max-width: 300px !important;
+}
